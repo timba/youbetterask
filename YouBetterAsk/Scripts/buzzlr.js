@@ -112,6 +112,10 @@
     var menuClick = function () {
         var action = $(this).data('do');
         deselectMenu();
+        if ('.' + action == selectors.questions) {
+            loadQuestions();
+        }
+
         $(this).parent('li').addClass('active');
         openArea('.' + action);
     }
